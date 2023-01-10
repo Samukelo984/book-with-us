@@ -1,0 +1,53 @@
+@import "../../configure";
+
+.hero {
+  display: flex;
+  justify-content: center;
+  color: $white;
+  background-color: $primary-color;
+  position: relative;
+
+  .hero-container {
+    width: 100%;
+    max-width: 64rem;
+    margin: 1.2rem 0rem 3.4rem 0rem;
+
+    .hero-links {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 2rem;
+
+      .hero-link {
+        padding: 0.3rem;
+        border-radius: 0.2rem;
+        @include maxFlex(column, center);
+        @include transition-ease;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+          background-color: $white;
+        }
+      }
+    }
+
+    p {
+      margin: 1.2rem 0rem;
+    }
+
+    button {
+      padding: 0.6rem;
+      color: $primary-color;
+      background-color: $white;
+      font-weight: 500;
+      border: none;
+      border-radius: 0.2rem;
+      @include transition-ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
