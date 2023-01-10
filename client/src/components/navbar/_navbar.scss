@@ -1,0 +1,35 @@
+@import "../../configure";
+
+.navbar {
+  height: 3rem;
+  @include minFlex(center);
+  background-color: $primary-color;
+
+  .nav-container {
+    width: 100%;
+    max-width: 64rem;
+    color: $white;
+    @include standFlex(space-between);
+
+    .logo {
+      font-weight: 500;
+    }
+
+    .nav-btns {
+      button {
+        padding: 0.3rem 0.6rem;
+        margin-left: 1.2rem;
+        color: $primary-color;
+        background-color: $white;
+        border: none;
+        border-radius: 0.2rem;
+        @include transition-ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
